@@ -1,0 +1,15 @@
+{
+  "tagid": "modmanager_bridge",
+  "filename": "modmanager_bridge",
+  "title": "Mod Manager Bridge",
+  "username": "ModManager",
+  "author": "ModManager",
+  "version_string": "2.3.3",
+  "status": "Active",
+  "category": "Tools & Utilities",
+  "resource_category_id": 7,
+  "icon": "icon.jpg",
+  "tag_line": "Localhost HTTP bridge connecting Desktop Mod Manager with BeamNG.drive's authenticated repository API.",
+  "message": "[B]Mod Manager Bridge v2.3.3[/B]\nLoopback HTTP bridge bound strictly to [B]127.0.0.1[/B] with per-install token verification ([B]X-Bridge-Token[/B]) and Host header validation.\n\n[H3]Endpoints[/H3]\n[LIST][*][B]GET /v1/health[/B] — Bridge status, online session, and authentication state[*][B]GET /v1/state[/B] — Update enabled flag or listener port[*][B]GET /v1/reload[/B] — Safely hot-reload the Bridge Lua extension[*][B]GET /v1/mods[/B] — Query official repository catalog via s1/v4/getMods[*][B]GET /v1/subscribed[/B] — List subscribed mods (own=1)[*][B]GET /v1/mod?id=...[/B] — Fetch full mod metadata via s1/v4/getMod[*][B]GET /v1/subscribe?id=...[/B] / [B]GET /v1/unsubscribe?id=...[/B] — Manage subscriptions[/LIST]\n\n[H3]Zero-Impact Polling & Auto-Wakeup[/H3]\nUses a non-blocking TCP socket at 150ms idle intervals during gameplay, and checks [B]modmanager_bridge.json[/B] every 1s while paused for automatic remote resume wakeup.",
+  "text": "[B]Mod Manager Bridge v2.3.3[/B]\nLoopback HTTP bridge bound strictly to [B]127.0.0.1[/B] with per-install token verification ([B]X-Bridge-Token[/B]) and Host header validation.\n\n[H3]Endpoints[/H3]\n[LIST][*][B]GET /v1/health[/B] — Bridge status, online session, and authentication state[*][B]GET /v1/state[/B] — Update enabled flag or listener port[*][B]GET /v1/reload[/B] — Safely hot-reload the Bridge Lua extension[*][B]GET /v1/mods[/B] — Query official repository catalog via s1/v4/getMods[*][B]GET /v1/subscribed[/B] — List subscribed mods (own=1)[*][B]GET /v1/mod?id=...[/B] — Fetch full mod metadata via s1/v4/getMod[*][B]GET /v1/subscribe?id=...[/B] / [B]GET /v1/unsubscribe?id=...[/B] — Manage subscriptions[/LIST]\n\n[H3]Zero-Impact Polling & Auto-Wakeup[/H3]\nUses a non-blocking TCP socket at 150ms idle intervals during gameplay, and checks [B]modmanager_bridge.json[/B] every 1s while paused for automatic remote resume wakeup."
+}
