@@ -5,7 +5,7 @@ All notable changes to BeamNG ModManager are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.0] - 2026-11-14 — Custom UI Controls, Active Profile Live-Sync & Dead-Code Purge
+## [0.1.0] - 2026-11-14 — Custom UI Controls, Active Profile Live-Sync & Dead-Code Purge
 
 Replaces native OS form controls with custom Dark Slate primitives, synchronizes active profile edits directly to disk, and removes legacy v1 IPC/UI code.
 
@@ -19,7 +19,7 @@ Replaces native OS form controls with custom Dark Slate primitives, synchronizes
 ### Fixed
 - **Active Profile Live-Sync & Apply Lock:** Updated `set_profile_mods` in `local_mods/profiles.rs` to immediately enable/disable delta mods on disk when modifying the active profile (while BeamNG is closed), and locked redundant re-apply actions when a profile is already active.
 
-## [0.6.0] - 2026-11-14 — Profiles v2 Workspace & Two-Tier Stateful Download Manager
+## [0.0.6] - 2026-11-14 — Profiles v2 Workspace & Two-Tier Stateful Download Manager
 
 Introduces a dedicated Profiles workspace with diff previews and undo backups alongside a multi-slot resumable Download Manager.
 
@@ -28,7 +28,7 @@ Introduces a dedicated Profiles workspace with diff previews and undo backups al
 - **Two-Tier Stateful Download Manager:** Added `DownloadDockWidget` and the slide-over `DownloadManagerPanel` backed by `download_manager.rs` with 1-3 concurrent transfer slots, queue prioritization, history tracking, and missing-mod batch queueing.
 - **Bandwidth Throttling & Range Resume:** Added `download_throttle.rs` (`200ms` token-bucket speed limiter), HTTP `Range` pause/resume, and ZIP magic-header verification.
 
-## [0.5.0] - 2026-11-14 — Win32 Input Context Menu, Settings Hub, Scoped Cache & Binary Size Optimization
+## [0.0.5] - 2026-11-14 — Win32 Input Context Menu, Settings Hub, Scoped Cache & Binary Size Optimization
 
 Unifies settings, diagnostics, and release notes while replacing WebView context menus and tuning frontend/Rust release artifacts.
 
@@ -40,7 +40,7 @@ Unifies settings, diagnostics, and release notes while replacing WebView context
 ### Improved
 - **Bundle & Binary Size Optimization:** Subset embedded WOFF2 fonts to `latin`/`latin-ext` (cutting `dist/` from `3.18 MB` to `1.05 MB`) and enabled Cargo release LTO + symbol stripping (`3.12 MiB` NSIS installer, `7.51 MiB` standalone binary).
 
-## [0.4.0] - 2026-11-13 — Hybrid In-Game Lua Bridge (`util_modmanagerBridge`), Subscriptions & Hot-Reload
+## [0.0.4] - 2026-11-13 — Hybrid In-Game Lua Bridge (`util_modmanagerBridge`), Subscriptions & Hot-Reload
 
 Connects the desktop client directly to the running BeamNG Lua runtime for authenticated Repository browsing, subscription sync, and zero-restart bridge updates.
 
@@ -49,7 +49,7 @@ Connects the desktop client directly to the running BeamNG Lua runtime for authe
 - **Non-Blocking Polling & Subscription Sync:** Polls sockets at `150ms` active (`1s` paused) intervals to proxy `s1/v4/getMods`, `s1/v4/getMod`, and `own=1` subscriptions via BeamNG's active session.
 - **Hot-Reload & Font Stack:** Added `/v1/reload` deferred Lua hot-reloading, a frosted-glass Vue 3 `BridgeSettings` overlay in-game, and the embedded Overpass / Noto Sans WOFF2 font stack.
 
-## [0.3.0] - 2026-11-13 — BeamNG Dark Slate Design System, Server-Side Repo Search & FS Signature Watcher
+## [0.0.3] - 2026-11-13 — BeamNG Dark Slate Design System, Server-Side Repo Search & FS Signature Watcher
 
 Establishes the BeamNG Dark Slate & Orange interface language alongside debounced Repository search and low-overhead filesystem change detection.
 
@@ -60,7 +60,7 @@ Establishes the BeamNG Dark Slate & Orange interface language alongside debounce
 - **Server-Side Repo Search:** Added `350ms` debounced `api.beamng.com` search queries with `repo_catalog.json` offline snapshot fallback.
 - **FS Signature Watcher:** Added a 3-second mtime/size signature watcher emitting `local-mods-changed` events for live folder synchronization.
 
-## [0.2.0] - 2026-11-13 — HTTP Rate-Limit Resilience, Rust BBCode AST/Sanitizer & Targeted Update Engine
+## [0.0.2] - 2026-11-13 — HTTP Rate-Limit Resilience, Rust BBCode AST/Sanitizer & Targeted Update Engine
 
 Hardens Official Repository networking against rate limits and adds native Rust BBCode parsing, resumable transfers, and targeted mod update checks.
 
@@ -69,7 +69,7 @@ Hardens Official Repository networking against rate limits and adds native Rust 
 - **Rust BBCode AST & Sanitizer (`bbcode.rs`):** Added XSS-hardened XenForo BBCode-to-HTML rendering for `ModDetailDrawer`, gallery lightbox, and version changelogs.
 - **Targeted Update Engine:** Added HTTP `Range` (`206`) resumable `.part` downloads, per-mod `tag_id` update checking, and persisted per-page controls.
 
-## [0.1.0] - 2026-11-11 — Modular SRP Refactor, Parallel `rayon` Indexer & Non-Blocking Process Monitor
+## [0.0.1] - 2026-11-11 — Modular SRP Refactor, Parallel `rayon` Indexer & Non-Blocking Process Monitor
 
 Foundational Tauri v2 (Rust) + React 19 release splitting the codebase into SRP modules with parallel archive indexing and lock-safe mod staging.
 

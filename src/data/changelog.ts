@@ -13,7 +13,7 @@ export interface ChangelogRelease {
 
 export const CHANGELOG_RELEASES: ChangelogRelease[] = [
   {
-    version: '0.7.0',
+    version: '0.1.0',
     date: '2026-11-14',
     title: 'Custom UI Controls, Active Profile Live-Sync & Dead-Code Purge',
     summary:
@@ -38,7 +38,7 @@ export const CHANGELOG_RELEASES: ChangelogRelease[] = [
     ],
   },
   {
-    version: '0.6.0',
+    version: '0.0.6',
     date: '2026-11-14',
     title: 'Profiles v2 Workspace & Two-Tier Stateful Download Manager',
     summary:
@@ -59,7 +59,7 @@ export const CHANGELOG_RELEASES: ChangelogRelease[] = [
     ],
   },
   {
-    version: '0.5.0',
+    version: '0.0.5',
     date: '2026-11-14',
     title: 'Win32 Input Context Menu, Settings Hub, Scoped Cache & Binary Size Optimization',
     summary:
@@ -84,7 +84,7 @@ export const CHANGELOG_RELEASES: ChangelogRelease[] = [
     ],
   },
   {
-    version: '0.4.0',
+    version: '0.0.4',
     date: '2026-11-13',
     title: 'Hybrid In-Game Lua Bridge (`util_modmanagerBridge`), Subscriptions & Hot-Reload',
     summary:
@@ -105,7 +105,7 @@ export const CHANGELOG_RELEASES: ChangelogRelease[] = [
     ],
   },
   {
-    version: '0.3.0',
+    version: '0.0.3',
     date: '2026-11-13',
     title: 'BeamNG Dark Slate Design System, Server-Side Repo Search & FS Signature Watcher',
     summary:
@@ -126,7 +126,7 @@ export const CHANGELOG_RELEASES: ChangelogRelease[] = [
     ],
   },
   {
-    version: '0.2.0',
+    version: '0.0.2',
     date: '2026-11-13',
     title: 'HTTP Rate-Limit Resilience, Rust BBCode AST/Sanitizer & Targeted Update Engine',
     summary:
@@ -147,7 +147,7 @@ export const CHANGELOG_RELEASES: ChangelogRelease[] = [
     ],
   },
   {
-    version: '0.1.0',
+    version: '0.0.1',
     date: '2026-11-11',
     title: 'Modular SRP Refactor, Parallel `rayon` Indexer & Non-Blocking Process Monitor',
     summary:

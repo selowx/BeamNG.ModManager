@@ -6,7 +6,7 @@
 
 **Desktop mod manager, profile switcher, and Official Repository client for BeamNG.drive.**
 
-[![Release](https://img.shields.io/badge/release-v0.7.0-ff6600?style=for-the-badge)](https://github.com/selowx/BeamNG.ModManager/releases/latest)
+[![Release](https://img.shields.io/badge/release-v0.1.0-ff6600?style=for-the-badge)](https://github.com/selowx/BeamNG.ModManager/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011%20x64-1c202a?style=for-the-badge)](https://github.com/selowx/BeamNG.ModManager/releases)
 [![Tauri](https://img.shields.io/badge/Tauri-2.2-24C8DB?style=for-the-badge&logo=tauri&logoColor=white)](https://tauri.app/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=1c202a)](https://react.dev/)
@@ -21,7 +21,7 @@
 ## Installation
 
 1. Open the [GitHub Releases](https://github.com/selowx/BeamNG.ModManager/releases/latest) page.
-2. Download the Windows installer (`BeamNG.ModManager_0.7.0_x64-setup.exe` or `.msi`) under **Assets**.
+2. Download the Windows installer (`BeamNG.ModManager_0.1.0_x64-setup.exe` or `.msi`) under **Assets**.
 3. Run the installer and launch **BeamNG.ModManager** — your BeamNG.drive install and user mod paths are detected automatically.
 
 > [!NOTE]
