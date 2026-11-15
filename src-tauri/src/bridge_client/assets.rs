@@ -5,7 +5,7 @@ use std::fs;
 use std::hash::{BuildHasher, Hasher};
 use std::path::{Path, PathBuf};
 
-pub const BRIDGE_ASSET_VERSION: &str = "2.3.3";
+pub const BRIDGE_ASSET_VERSION: &str = "1.0.0";
 const MOD_SCRIPT_LUA: &str = include_str!("../../assets/bridge/modScript.lua");
 const BRIDGE_LUA: &str = include_str!("../../assets/bridge/modmanagerBridge.lua");
 const UI_INDEX_JS: &str = include_str!("../../assets/bridge/ui_index.js");
@@ -254,13 +254,13 @@ mod tests {
 
     #[test]
     fn embedded_bridge_metadata_and_icon_are_valid() {
-        assert_eq!(BRIDGE_ASSET_VERSION, "2.3.3");
+        assert_eq!(BRIDGE_ASSET_VERSION, "1.0.0");
         assert!(ICON_JPG.len() <= 40 * 1024 && ICON_JPG.starts_with(&[0xff, 0xd8, 0xff]));
         assert!(BRIDGE_ASSETS.iter().any(|(p, _)| *p == "scripts/modmanager_bridge/info.json"));
         assert!(BRIDGE_ASSETS.iter().any(|(p, _)| *p == "scripts/modmanager_bridge/icon.jpg"));
         let v: serde_json::Value = serde_json::from_str(INFO_JSON).expect("valid info.json");
         assert_eq!(v["tagid"], "modmanager_bridge");
-        assert_eq!(v["version_string"], "2.3.3");
+        assert_eq!(v["version_string"], "1.0.0");
         assert_eq!(v["version_string"], BRIDGE_ASSET_VERSION);
         assert_eq!(v["icon"], "icon.jpg");
         assert_eq!(v["status"], "Active");

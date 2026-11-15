@@ -3,7 +3,7 @@ local M = {}
 local socket = require("socket.socket")
 local ltn12 = require("ltn12")
 
-local BRIDGE_VERSION = "2.3.3"
+local BRIDGE_VERSION = "1.0.0"
 local SETTINGS_PATH, OPTOUT_PATH, MAX_HEADER_BYTES, CLIENT_TIMEOUT, IDLE_INTERVAL =
   "/settings/modmanager_bridge.json", "/settings/cloud/mods-optout.json", 16384, 12, 0.15
 local config, state = { enabled = true, port = 23519, token = "" }, { enabled = true, bindError = nil, requestsServed = 0 }

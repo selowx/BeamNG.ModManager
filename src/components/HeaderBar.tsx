@@ -91,7 +91,7 @@ export function HeaderBar({
               <span className="text-white italic font-bold">BeamNG</span>
               <span className="hidden xl:inline text-[#ff6600] italic font-bold">.ModManager</span>
             </span>
-            <Badge variant="outline" className="hidden 2xl:inline-flex font-mono tabular-nums text-[11px] ml-1 shrink-0">
+            <Badge variant="outline" className="hidden xl:inline-flex font-mono tabular-nums text-[11px] ml-1 shrink-0">
               v{pkg.version}
             </Badge>
           </div>

@@ -65,7 +65,7 @@
           </div>
 
           <p class="bridge-note">
-            Bridge v2.3.3 — Localhost listener (127.0.0.1:{{ status.port }}): polls once every 150ms when idle and calls
+            Bridge v1.0.0 — Localhost listener (127.0.0.1:{{ status.port }}): polls once every 150ms when idle and calls
             core_online.apiCall directly without Chromium UI churn.
           </p>
         </div>
