@@ -1,0 +1,4 @@
+[target.x86_64-pc-windows-msvc]
+# Keep the VC runtime inside the executable, so a clean Windows installation
+# does not need a separately installed Visual C++ Redistributable.
+rustflags = ["-C", "target-feature=+crt-static"]
