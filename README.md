@@ -92,14 +92,14 @@ BeamNG.ModManager/
 ### Prerequisites
 
 - **Node.js** (LTS) and `npm`
-- **Rust toolchain** (`cargo`, `rustc`)
+- **Rust toolchain** (`cargo`, `rustc`); Windows builds require the **MSVC** toolchain, not MinGW/GNU/LLVM
 - **Windows:** Microsoft Edge WebView2 Runtime & Visual Studio C++ Build Tools (required by Tauri v2)
 
 ### Commands
 
 ```bash
 # Install frontend dependencies
-npm install
+npm ci
 
 # Run in development mode (Vite dev server + Tauri window)
 npm run tauri dev
@@ -112,5 +112,25 @@ cargo check --manifest-path src-tauri/Cargo.toml
 cargo test --manifest-path src-tauri/Cargo.toml
 
 # Build Windows release executables & NSIS/MSI installers
-npm run tauri build
+rustup toolchain install stable-x86_64-pc-windows-msvc --profile minimal
+rustup target add x86_64-pc-windows-msvc
+npm run build:windows
 ```
+
+Windows release builds explicitly target `x86_64-pc-windows-msvc` and statically
+link the VC runtime via `.cargo/config.toml`. Non-MSVC Windows targets are
+rejected by the build script to prevent missing MinGW runtime DLLs such as
+`libunwind.dll` ([#1](https://github.com/selowx/BeamNG.ModManager/issues/1)).
+Run commands from the repository root so Cargo loads this configuration.
+
+The Windows CI workflow builds both installers, checks the executable's DLL
+imports, and starts it with a system-only `PATH` before uploading the installers
+as the `windows-installers` artifact. For the same check locally, run this from
+a Visual Studio developer PowerShell after building:
+
+```powershell
+./scripts/check-windows-runtime.ps1 -ExePath src-tauri/target/x86_64-pc-windows-msvc/release/beamng-mod-manager.exe
+```
+
+Existing v0.1.0 downloads are not changed by this source fix; publish newly built
+installers to deliver it to users.
